@@ -5,6 +5,7 @@ import NavBar from './components/1-Navbar';
 import SinglePage from './pages/1-SinglePage';
 import AllPhoto from './pages/2-Photos';
 import ScrollToTop from './components/0-Scroll/index'
+import Whatsapp from './components/0-WhatsappIcon';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
   return (
     <div className='App'>
       <NavBar className={`NavBar-Component ${!showNav ? 'hidden' : ''}`} landingRef={landingRef} />
+      <Whatsapp/>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<SinglePage landingRef={landingRef} />} />

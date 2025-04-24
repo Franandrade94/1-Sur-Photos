@@ -1,0 +1,53 @@
+@media (max-width: 767px){
+
+    .Whatsapp-container {
+        position: fixed;
+        bottom: 0.5%;
+        right: 2%;
+        cursor: pointer;
+        z-index: 999999999;
+        overflow: visible;
+    }
+    
+    .Whatsapp-Logo {
+        width: 60px;
+        height: 60px;
+    } 
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+
+    .Whatsapp-container {
+        position: fixed;
+        bottom: 1%;
+        right: 2%;
+        cursor: pointer;
+        z-index: 999999999;
+        overflow: visible;
+    }
+    
+    .Whatsapp-Logo {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (min-width: 1024px){
+
+   .Whatsapp-container {
+       position: fixed;
+       bottom: 2%;
+       right: 1%;
+       cursor: pointer;
+       z-index: 999999999;
+       overflow: visible;
+   }
+   
+   .Whatsapp-Logo {
+       width: 60px;
+       height: 60px;
+   }
+
+}

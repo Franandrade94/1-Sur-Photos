@@ -1,12 +1,14 @@
 import './footer.css';
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 
 const Footer = () => {
 
-    const Navigate = useNavigate()
+    const handleInstagram = () => {
+        window.open('https://www.instagram.com/sur.fv?igsh=MWMxNmF1YmdjaWRwZA==')
+    }
+    
 
     return(
         <div className='Footer-Component'>
@@ -17,7 +19,7 @@ const Footer = () => {
                 <div className='Icons'>
                     <FaFacebookF/>
                 </div>
-                <div className='Icons'>
+                <div className='Icons' onClick={ handleInstagram } >
                     <FaInstagram/>
                 </div>
             </div>
