@@ -73,6 +73,7 @@
   }
     
   .Modal-Image {
+    touch-action: pan-y;
     max-width: 90vw;
     max-height: 90vh;
     border-radius: 12px;
@@ -157,6 +158,7 @@
   }
     
   .Modal-Image {
+    touch-action: pan-y;
     max-width: 90vw;
     max-height: 90vh;
     border-radius: 12px;

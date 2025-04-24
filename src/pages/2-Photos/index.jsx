@@ -13,6 +13,7 @@ const AllPhoto = () => {
   const { name } = useParams();
   const filteredPhotos = Photos.filter(photo => photo.Type === name);
 
+  const [touchEndX, setTouchEndX] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState(null);
@@ -79,10 +80,17 @@ const AllPhoto = () => {
     setTouchStartX(e.changedTouches[0].clientX);
   };
 
-  const handleTouchEnd = (e) => {
-    const touchEndX = e.changedTouches[0].clientX;
-    if (touchStartX - touchEndX > 50) showNext();
-    if (touchEndX - touchStartX > 50) showPrev();
+  const handleTouchMove = (e) => {
+    setTouchEndX(e.changedTouches[0].clientX);
+  };
+  
+  const handleTouchEnd = () => {
+    if (!touchStartX || !touchEndX) return;
+    const distance = touchStartX - touchEndX;
+    if (distance > 50) showNext();
+    if (distance < -50) showPrev();
+    setTouchStartX(null);
+    setTouchEndX(null);
   };
 
   return (
@@ -113,16 +121,15 @@ const AllPhoto = () => {
         onRequestClose={closeModal}
         className="Modal-Content"
         overlayClassName="Modal-Overlay"
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
       >
-        <button className="Modal-Arrow left" onClick={showPrev}>‹</button>
         <img
           src={filteredPhotos[currentIndex].Image}
           alt="Preview"
           className="Modal-Image"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         />
-        <button className="Modal-Arrow right" onClick={showNext}>›</button>
       </Modal>
 
       <Footer />
