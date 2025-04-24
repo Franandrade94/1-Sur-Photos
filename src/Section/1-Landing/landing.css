@@ -1,0 +1,220 @@
+@media only screen and (max-width: 768px){
+    .Landing-Component {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        position: relative;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #ebebeb;
+    }
+    
+    .Logo-Landing-Container {
+        position: absolute;
+        z-index: 10;
+        width: 100vw;
+        max-width: 100%;
+        height: 100vh;
+        padding-top: 8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Logo-Landing-Container img{
+        width: 90%;
+    }
+    
+    .Slider-Container {
+        width: 100vw;
+        min-width: 100%;
+        height: 100%;
+    }
+    
+    .Slider-Img-Container {
+        width: 100vw;
+        max-width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .Slider-Img {
+        width: 100vw;
+        max-width: 100%;
+        display: block;
+        object-fit: cover;
+        height: 100vh;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+    
+    .Slider-Img.loaded {
+        opacity: 1;
+    }
+
+    .slick-slider,
+    .slick-list,
+    .slick-track {
+        overflow: hidden;
+    }
+
+    .slick-track {
+        display: flex !important;
+    }
+     
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .Landing-Component {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        position: relative;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #ebebeb;
+    }
+    
+    .Logo-Landing-Container {
+        position: absolute;
+        z-index: 10;
+        width: 100vw;
+        max-width: 100%;
+        height: 100vh;
+        padding-top: 8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Logo-Landing-Container img{
+        width: 60%;
+    }
+    
+    .Slider-Container {
+        width: 100vw;
+        min-width: 100%;
+        height: 100%;
+    }
+    
+    .Slider-Img-Container {
+        width: 100vw;
+        max-width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .Slider-Img {
+        width: 100vw;
+        max-width: 100%;
+        display: block;
+        object-fit: cover;
+        height: 100vh;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+    
+    .Slider-Img.loaded {
+        opacity: 1;
+    }
+
+    .slick-slider,
+    .slick-list,
+    .slick-track {
+        overflow: hidden;
+    }
+
+    .slick-track {
+        display: flex !important;
+    }
+
+}
+
+@media (min-width: 1024px){
+
+    .Landing-Component {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        position: relative;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #ebebeb;
+    }
+    
+    .Logo-Landing-Container {
+        position: absolute;
+        z-index: 10;
+        width: 100vw;
+        max-width: 100%;
+        height: 100vh;
+        padding-top: 8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Logo-Landing-Container img{
+        width: 60%;
+    }
+    
+    .Slider-Container {
+        width: 100vw;
+        min-width: 100%;
+        height: 100%;
+    }
+    
+    .Slider-Img-Container {
+        width: 100vw;
+        max-width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .Slider-Img {
+        width: 100vw;
+        max-width: 100%;
+        display: block;
+        object-fit: cover;
+        height: 100vh;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+    
+    .Slider-Img.loaded {
+        opacity: 1;
+    }
+
+    .slick-slider,
+    .slick-list,
+    .slick-track {
+        overflow: hidden;
+    }
+
+    .slick-track {
+        display: flex !important;
+    }
+
+}

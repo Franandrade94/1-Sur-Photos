@@ -1,0 +1,416 @@
+@media only screen and (max-width: 768px){
+    
+    .WorkGrid-Component.video-style {
+        position: absolute;
+        top: 74%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-left: 0%;
+        height: 40%;
+        width: 90%;
+    }    
+
+    .WorkGrid-Component.default-style {
+        position: absolute;
+        top: 74%;
+        left: 50%;
+        margin-left: 0%;
+        transform: translate(-50%, -50%);
+        height: 40%;
+        width: 90%;
+    }
+    
+    .WorkGrid-Component.video-style .WorkGrid-Container {
+        width: 100%;
+        height: 100%;
+        padding: 0%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.2rem;
+        justify-items: flex-start;
+    }
+
+    .WorkGrid-Component.default-style .WorkGrid-Container {
+        width: 100%;
+        height: 100%;
+        padding: 0%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.2rem;
+        justify-items: flex-start;
+    }
+
+    .WorkGrid-Component.default-style .WorkGrid-Container.tall-grid {
+        height: 100%;
+    }
+    
+    .Spinner-Overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+        pointer-events: none;
+    }
+    
+
+    .WorkGrid-Component.video-style .Workgrid-Items{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        display: flex;
+    }
+
+    .WorkGrid-Component.default-style .Workgrid-Items{
+        position: relative;
+        width: 100%;
+        height: 13vh;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        display: flex;
+    }
+
+    .Workgrid-Items:hover {
+        transform: scale(1.02); 
+    }
+
+    .WorkGrid-Component.video-style .Workgrid-Image{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .WorkGrid-Component.default-style .Workgrid-Image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .Workgrid-Overlay{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 10px 0;
+    }
+
+    .Workgrid-Name{
+        color: #fff;
+        font-weight: bold;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .Modal-Overlay {
+        background-color: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        top: 0; left: 0;
+        right: 0; bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+      
+    .Modal-Content {
+        position: relative;
+        background: none;
+        border: none;
+        outline: none;
+    }
+      
+    .Modal-Video {
+        max-width: 90vw;
+        max-height: 90vh;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }  
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .WorkGrid-Component.video-style {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-left: 12.5%;
+        height: 70%;
+        width: 74%;
+    }    
+
+    .WorkGrid-Component.default-style {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: 12.5%;
+        transform: translate(-50%, -50%);
+        height: 70%;
+        width: 74%;
+    }
+    
+    .WorkGrid-Component.video-style .WorkGrid-Container {
+        width: 100%;
+        height: 100%;
+        padding: 0%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.2rem;
+        justify-items: flex-start;
+    }
+
+    .WorkGrid-Component.default-style .WorkGrid-Container {
+        width: 100%;
+        height: 100%;
+        padding: 0%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.2rem;
+        justify-items: flex-start;
+    }
+
+    .WorkGrid-Component.default-style .WorkGrid-Container.tall-grid {
+        height: 100%;
+    }
+    
+    .Spinner-Overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+        pointer-events: none;
+    }
+    
+
+    .WorkGrid-Component.video-style .Workgrid-Items{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        display: flex;
+    }
+
+    .WorkGrid-Component.default-style .Workgrid-Items{
+        position: relative;
+        width: 100%;
+        height: 23vh;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        display: flex;
+    }
+
+    .Workgrid-Items:hover {
+        transform: scale(1.02); 
+    }
+
+    .WorkGrid-Component.video-style .Workgrid-Image{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .WorkGrid-Component.default-style .Workgrid-Image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .Workgrid-Overlay{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 10px 0;
+    }
+
+    .Workgrid-Name{
+        color: #fff;
+        font-weight: bold;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .Modal-Overlay {
+        background-color: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        top: 0; left: 0;
+        right: 0; bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+      
+    .Modal-Content {
+        position: relative;
+        background: none;
+        border: none;
+        outline: none;
+    }
+      
+    .Modal-Video {
+        max-width: 90vw;
+        max-height: 90vh;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }  
+
+}
+
+@media (min-width: 1024px){
+
+    .WorkGrid-Component.video-style {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-left: 10%;
+        height: 80%;
+        width: 60%;
+    }    
+
+    .WorkGrid-Component.default-style {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: 10%;
+        transform: translate(-50%, -50%);
+        height: 80%;
+        width: 60%;
+    }
+    
+    .WorkGrid-Component.video-style .WorkGrid-Container {
+        width: 100%;
+        height: 100%;
+        padding: 0%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.2rem 4rem;
+        justify-items: flex-start;
+    }
+
+    .WorkGrid-Component.default-style .WorkGrid-Container {
+        width: 100%;
+        padding: 0%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem 4rem;
+        justify-items: flex-start;
+    }
+
+    .WorkGrid-Component.default-style .WorkGrid-Container.tall-grid {
+        height: 100%;
+    }
+    
+    .WorkGrid-Component.default-style .WorkGrid-Container.auto-grid {
+        
+    }
+    
+    .Spinner-Overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+        pointer-events: none;
+    }
+    
+
+    .WorkGrid-Component.video-style .Workgrid-Items{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .WorkGrid-Component.default-style .Workgrid-Items{
+        position: relative;
+        width: 100%;
+        height: 22.7vh;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .Workgrid-Items:hover {
+        transform: scale(1.02); 
+    }
+
+    .WorkGrid-Component.video-style .Workgrid-Image{
+        width: 100%;
+        height: 100%;
+    }
+
+    .WorkGrid-Component.default-style .Workgrid-Image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .Workgrid-Overlay{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 10px 0;
+    }
+
+    .Workgrid-Name{
+        color: #fff;
+        font-weight: bold;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .Modal-Overlay {
+        background-color: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        top: 0; left: 0;
+        right: 0; bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+      
+    .Modal-Content {
+        position: relative;
+        background: none;
+        border: none;
+        outline: none;
+    }
+      
+    .Modal-Video {
+        max-width: 90vw;
+        max-height: 90vh;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }      
+
+}

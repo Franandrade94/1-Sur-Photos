@@ -1,0 +1,11 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}

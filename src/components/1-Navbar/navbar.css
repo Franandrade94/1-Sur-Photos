@@ -1,0 +1,185 @@
+@media only screen and (max-width: 768px){
+    
+    .NavBar-Component{
+        width: 100vw;
+        height: 10vh;
+        background-color: #ebebeb;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0% 0%;
+        z-index: 999999;
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .NavBar-Component.hidden {
+        opacity: 0;
+        transform: translateY(-100%);
+        pointer-events: none;
+    }
+
+    .NavBar-Container{
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .NavBar-Logo{
+        width: 30vw;
+    }
+
+    .NavBar-Content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #1c1c1b;
+        margin-right: 3%;
+    }
+
+    .NavBar-Content h3{
+        font-size: 4vw;
+        font-weight: 500;
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+
+    .NavBar-Content p {
+        font-size: 3vw;
+        font-weight: 500; 
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+      
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .NavBar-Component{
+        width: 100%;
+        width: 100vw;
+        height: 12vh;
+        background-color: #ebebeb;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0% 0%;
+        z-index: 999999;
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .NavBar-Component.hidden {
+        opacity: 0;
+        transform: translateY(-100%);
+        pointer-events: none;
+    }
+
+    .NavBar-Container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .NavBar-Logo{
+        width: 20vw;
+    }
+
+    .NavBar-Content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #1c1c1b;
+        margin-right: 2%;
+    }
+
+    .NavBar-Content h3{
+        font-size: 2.5vw;
+        font-weight: 500;
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+
+    .NavBar-Content p {
+        font-size: 1.8vw;
+        font-weight: 500; 
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+
+}
+
+@media (min-width: 1024px){
+    
+    .NavBar-Component{
+        width: 100%;
+        min-width: 100vh;
+        height: 12vh;
+        background-color: #ebebeb;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0% 0%;
+        z-index: 999999;
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .NavBar-Component.hidden {
+        opacity: 0;
+        transform: translateY(-100%);
+        pointer-events: none;
+    }
+
+    .NavBar-Container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .NavBar-Logo{
+        width: 15vw;
+    }
+
+    .NavBar-Content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #1c1c1b;
+        margin-right: 2%;
+    }
+
+    .NavBar-Content h3{
+        font-size: 1.5vw;
+        font-weight: 500;
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+
+    .NavBar-Content p {
+        font-size: 1.1vw;
+        font-weight: 500; 
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+
+}
