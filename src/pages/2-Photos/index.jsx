@@ -6,6 +6,8 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Modal from 'react-modal';
 import Footer from '../../Section/3-Footer';
 import { ClipLoader } from 'react-spinners';
+import { IoIosCloseCircle, IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from "react-icons/io";
+
 
 Modal.setAppElement('#root');
 
@@ -122,6 +124,10 @@ const AllPhoto = () => {
         className="Modal-Content"
         overlayClassName="Modal-Overlay"
       >
+        <button className="Overlay-Close" onClick={closeModal}><IoIosCloseCircle/></button>
+
+        <button className="Modal-Arrow left" onClick={showPrev}><IoIosArrowDropleftCircle/></button>
+
         <img
           src={filteredPhotos[currentIndex].Image}
           alt="Preview"
@@ -130,8 +136,9 @@ const AllPhoto = () => {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         />
+        <button className="Modal-Arrow right" onClick={showNext}><IoIosArrowDroprightCircle/></button>
       </Modal>
-
+      
       <Footer />
     </>
   );

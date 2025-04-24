@@ -8,7 +8,10 @@ const Footer = () => {
     const handleInstagram = () => {
         window.open('https://www.instagram.com/sur.fv?igsh=MWMxNmF1YmdjaWRwZA==')
     }
-    
+
+    const handleFacebook = () => {
+        window.open('https://www.facebook.com/sur.fotografiayvideo')
+    }
 
     return(
         <div className='Footer-Component'>
@@ -16,7 +19,7 @@ const Footer = () => {
                 <p>SUR.CREATIVOSVISUALES@GMAIL.COM</p>
             </div>
             <div className='Icons-Container'>
-                <div className='Icons'>
+                <div className='Icons' onClick={ handleFacebook }>
                     <FaFacebookF/>
                 </div>
                 <div className='Icons' onClick={ handleInstagram } >
