@@ -1,6 +1,6 @@
 import './allphoto.css';
 import Photos from '../../content/4-Photos';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Modal from 'react-modal';
@@ -42,7 +42,6 @@ const AllPhoto = () => {
     });
   }, [filteredPhotos]);
 
-  
   const openModal = (index) => {
     setCurrentIndex(index);
     setModalIsOpen(true);
@@ -52,13 +51,13 @@ const AllPhoto = () => {
     setModalIsOpen(false);
   };
 
-  const showNext = () => {
+  const showNext = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % filteredPhotos.length);
-  };
+  }, [filteredPhotos.length]);
 
-  const showPrev = () => {
+  const showPrev = useCallback(() => {
     setCurrentIndex((prev) => (prev - 1 + filteredPhotos.length) % filteredPhotos.length);
-  };
+  }, [filteredPhotos.length]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -69,7 +68,7 @@ const AllPhoto = () => {
         showPrev();
       }
     };
-  
+
     window.addEventListener('keydown', handleKeyDown);
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
