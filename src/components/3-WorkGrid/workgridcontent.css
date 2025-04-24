@@ -74,10 +74,6 @@
         display: flex;
     }
 
-    .Workgrid-Items:hover {
-        transform: scale(1.02); 
-    }
-
     .WorkGrid-Component.video-style .Workgrid-Image{
         top: 0;
         left: 0;
@@ -212,10 +208,6 @@
         transition: transform 0.3s ease-in-out;
         cursor: pointer;
         display: flex;
-    }
-
-    .Workgrid-Items:hover {
-        transform: scale(1.02); 
     }
 
     .WorkGrid-Component.video-style .Workgrid-Image{
