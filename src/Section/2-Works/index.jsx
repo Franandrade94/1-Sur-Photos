@@ -1,11 +1,23 @@
 import './works.css';
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import WorksContent from '../../content/2-Works';
 import WorkGrid from '../../components/3-WorkGrid';
+
+
 
 const Works = () => {
   const [selectedWorkId, setSelectedWorkId] = useState(null);
   const worksRefs = useRef({});
+
+  useEffect(() => {
+    const scrollToId = sessionStorage.getItem('scrollTargetId');
+    if (scrollToId && worksRefs.current[scrollToId]) {
+      setTimeout(() => {
+        worksRefs.current[scrollToId].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 50); // Muy rápido
+      sessionStorage.removeItem('scrollTargetId'); // Limpiamos después
+    }
+  }, []);
 
   const handleSelect = (id) => {
     setSelectedWorkId((prevId) => (prevId === id ? null : id));
@@ -21,6 +33,7 @@ const Works = () => {
           if (selectedWorkId && work.Id !== selectedWorkId) return null;
           return (
             <div
+              id={work.Id}
               key={index}
               ref={(el) => (worksRefs.current[work.Id] = el)}
               className='Work-Item'

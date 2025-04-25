@@ -1,13 +1,13 @@
 import './allphoto.css';
 import Photos from '../../content/4-Photos';
 import React, { useState, useEffect, useCallback } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Modal from 'react-modal';
 import Footer from '../../Section/3-Footer';
 import { ClipLoader } from 'react-spinners';
 import { IoIosCloseCircle, IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from "react-icons/io";
-
+import { IoArrowBackCircle } from "react-icons/io5";
 
 Modal.setAppElement('#root');
 
@@ -20,6 +20,10 @@ const AllPhoto = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const preloadImages = (photos) => {
     return Promise.all(
@@ -95,8 +99,40 @@ const AllPhoto = () => {
     setTouchEndX(null);
   };
 
+  const navigate = useNavigate();
+
+  // 🧠 Acá armás el mapeo Type => Id
+  const typeToWorkId = {
+    'El Patio': 3,
+    'Gatos': 3,
+    'Perros': 3,
+    'JUANPE & MAR': 1,
+    'TOPO & SOL': 1,
+    'Familia': 1,
+    'Felipe': 1,
+    'Micaela': 1,
+    'Playa': 1,
+    'Skate Park': 1,
+    'Calmeva': 2,
+    'Estivaneli': 2,
+    'Lumilagro': 2,
+  };
+
+  const handleBackClick = () => {
+    const targetId = typeToWorkId[name] || null;
+    if (targetId) {
+      sessionStorage.setItem('scrollTargetId', targetId);
+      navigate('/');
+    } else {
+      navigate('/');
+    }
+  };
+
   return (
     <>
+      <div className='Back-Ph-Container'>
+        <button className='Back-Ph-Button' onClick={handleBackClick}> <IoArrowBackCircle /> </button>
+      </div>
       {loading ? (
         <div className="Spinner-FullScreen">
           <ClipLoader size={50} color="#1c1c1b" />
