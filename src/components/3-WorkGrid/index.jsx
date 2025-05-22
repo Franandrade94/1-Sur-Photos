@@ -99,10 +99,30 @@ const WorkGrid = ({ selectedType, anchorRef }) => {
         overlayClassName="Modal-Overlay"
       >
         {videoUrl && (
-          <video controls autoPlay className="Modal-Video">
-            <source src={videoUrl} type="video/mp4" />
-            Tu navegador no soporta el video.
-          </video>
+          <div
+            className="Video-Wrapper"
+            style={{
+              backgroundImage: loadedImages['modal']
+                ? 'none'
+                : `url(${Videos.find(v => v.video === videoUrl)?.Image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+            }}
+          >
+            <video
+              controls
+              className="Modal-Video"
+              onCanPlay={() => setLoadedImages(prev => ({ ...prev, modal: true }))}
+              style={{
+                opacity: loadedImages['modal'] ? 1 : 0,
+                transition: 'opacity 0.3s ease-in-out',
+              }}
+            >
+              <source src={videoUrl} type="video/mp4" />
+              Tu navegador no soporta el video.
+            </video>
+          </div>
         )}
       </Modal>
     </div>
