@@ -147,6 +147,27 @@ const WorksGrid = [
         Image: 'https://imgur.com/mRQsobj.jpg',
     },
 
+    {
+        Id: 22,
+        Type: 'MASCOTAS',
+        Name:'Luna',
+        Image: 'https://imgur.com/NvZ0myd.jpg',
+    },
+
+    {
+        Id: 23,
+        Type: 'PERSONAS',
+        Name:'Cacto',
+        Image: 'https://imgur.com/lXkNQoh.jpg',
+    },
+
+    {
+        Id: 24,
+        Type: 'PERSONAS',
+        Name:'Hot Yoga',
+        Image: 'https://imgur.com/prk2ztm.jpg',
+    },
+
 ];
 
 export default WorksGrid;
