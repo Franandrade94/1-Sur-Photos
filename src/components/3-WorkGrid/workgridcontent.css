@@ -33,7 +33,7 @@
     .WorkGrid-Component.default-style .WorkGrid-Container {
         width: 100%;
         height: 100%;        
-        overflow-y: scroll;
+        overflow-y: auto;
         overflow-x: hidden;
         padding: 2% 0%;
         display: grid;
@@ -181,7 +181,7 @@
     .WorkGrid-Component.default-style .WorkGrid-Container {
         width: 100%;
         height: 100%;        
-        overflow-y: scroll;
+        overflow-y: auto;
         overflow-x: hidden;
         padding: 2% 0%;
         display: grid;
@@ -329,7 +329,7 @@
     .WorkGrid-Component.default-style .WorkGrid-Container {
         width: 100%;
         height: 100%;
-        overflow-y: scroll;
+        overflow-y: auto;
         overflow-x: hidden;
         padding: 2% 0%;
         padding-bottom: 2%;
